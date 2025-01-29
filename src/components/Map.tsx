@@ -16,6 +16,9 @@ const Map = ({ data }: MapProps) => {
     const width = 600;
     const height = 800;
 
+    // Clear existing content
+    svg.selectAll("*").remove();
+
     // Set up projection
     const projection = d3.geoMercator()
       .center([81, 7.5])
